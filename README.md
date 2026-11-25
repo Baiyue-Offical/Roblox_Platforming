@@ -1,4 +1,5 @@
 # Roblox_Platforming
+下週開始遊戲欣賞
 遊戲要求
 - 至少兩個觸碰即可切換隊伍的CheckPoint
 - 至少兩種我之前教過的代碼 (如果看不懂 MovingScript, 就用 DisappearScript 和 WreckingScript。)
