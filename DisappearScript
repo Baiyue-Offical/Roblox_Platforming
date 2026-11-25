@@ -1,0 +1,19 @@
+-- 開啟一個無限循環，讓以下代碼不斷重複執行
+while true do 
+	-- 關閉零件的碰撞屬性（玩家可以穿過它，不會站上去）
+	script.Parent.CanCollide = false
+	-- 將零件的透明度設為 0.8，提示玩家零件站不上去
+	script.Parent.Transparency = 0.8
+	-- 隨機等待 3 到 5 秒
+	task.wait(math.random(3,5))
+	-- 開啟零件的碰撞屬性（零件變回實體，玩家可以站上去）
+	script.Parent.CanCollide = true
+	-- 將零件的透明度設為 0 = 完全看得到
+	script.Parent.Transparency = 0
+	-- 隨機等待 3 到 5 秒
+	task.wait(math.random(3,5))
+	-- 將零件的透明度設為 0.4，作為零件即將站不上去的警告
+	script.Parent.Transparency = 0.4
+	-- 等待 1 秒後，重新開始循環
+	task.wait(1)
+end
