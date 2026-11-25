@@ -1,0 +1,24 @@
+-- 開啟一個無限循環，讓物件永遠來回移動
+while true do
+	-- for loop 1：將物件沿著 Z 軸向前移動
+	-- 重複執行 30 次 (count 從 1 開始, 每次增加 1, 直到達到 30 為止)
+	for count = 1, 30, 1 do
+		-- 在 Z 軸上將物件向前移動 1 個單位
+		script.Parent.Position += Vector3.new(0, 0, 1)
+		-- 暫停 0.5 秒後再進行下一次移動
+		task.wait(0.5)
+	end
+	-- for loop 2：將物件沿著正 Z 軸向後移動
+	-- 重複執行 30 次
+	for count = 1, 30, 1 do
+		-- 在 Z 軸上將物件向後移動 1 個單位（返回起點）
+		script.Parent.Position += Vector3.new(0, 0, 1)
+		-- 暫停 0.5 秒後再進行下一次移動
+		task.wait(0.5)
+	end
+end
+
+-- Vector3.new(0, 0, 0) 
+-- 第一個數字代表 X 軸，在遊戲中以紅色箭頭表示
+-- 第二個數字代表 Y 軸 (上下)，在遊戲中以綠色箭頭表示
+-- 第三個數字代表 Z 軸，在遊戲中以藍色箭頭表示
