@@ -1,0 +1,8 @@
+-- 當有物件觸碰到此物件時，觸發這個代碼
+script.Parent.Touched:Connect(function(hit)
+	-- 檢查觸碰到的物件 (hit) 是否 "Humanoid"（代表它是玩家角色或 NPC）
+	if hit and hit.Parent and hit.Parent:FindFirstChild("Humanoid") then
+		-- 將觸碰到此物件的角色的生命值設為 0, 使其立即死亡
+		hit.Parent.Humanoid.Health = 0
+	end
+end)
